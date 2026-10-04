@@ -1,0 +1,505 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #020409;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* =========================
+   БАННЕР
+========================= */
+
+.banner {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+    min-height: 650px;
+
+    padding: 70px;
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(0, 220, 255, 0.35),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(0, 80, 255, 0.3),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #07101c,
+            #031c2b,
+            #02050a
+        );
+
+    box-shadow:
+        0 0 80px rgba(0, 210, 255, 0.2),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* =========================
+   ЖАРЫКТАР
+========================= */
+
+.light {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+.light-one {
+    width: 330px;
+    height: 330px;
+
+    right: -100px;
+    top: -100px;
+
+    background: #00d9ff;
+
+    opacity: 0.2;
+}
+
+.light-two {
+    width: 300px;
+    height: 300px;
+
+    left: -100px;
+    bottom: -100px;
+
+    background: #0055ff;
+
+    opacity: 0.2;
+}
+
+/* =========================
+   КОНТЕНТ
+========================= */
+
+.content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 650px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #00d9ff;
+    border-radius: 50px;
+
+    color: #00d9ff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 25px rgba(0,217,255,0.2);
+}
+
+/* =========================
+   БАШКЫ ТЕКСТ
+========================= */
+
+h1 {
+    font-size: 90px;
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+}
+
+h1 span {
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 10px #00d9ff,
+        0 0 35px rgba(0,217,255,0.8);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    max-width: 600px;
+
+    margin-top: 28px;
+
+    color: #b8c5d1;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   КАРТОЧКАЛАР
+========================= */
+
+.features {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.feature {
+    min-width: 125px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,0.2);
+}
+
+.icon {
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+.feature p {
+    color: #d9e5ee;
+
+    font-size: 13px;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 18px 30px;
+
+    border-radius: 50px;
+
+    background: #00d9ff;
+
+    color: #001017;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,0.7),
+        0 0 50px rgba(0,217,255,0.25);
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 30px #00d9ff,
+        0 0 70px rgba(0,217,255,0.4);
+}
+
+/* =========================
+   НОУТБУК
+========================= */
+
+.laptop {
+    position: absolute;
+
+    right: 70px;
+    top: 145px;
+
+    width: 360px;
+
+    z-index: 3;
+
+    transform: rotate(-4deg);
+}
+
+.screen {
+    height: 230px;
+
+    padding: 12px;
+
+    border: 8px solid #202a33;
+
+    border-radius: 18px 18px 8px 8px;
+
+    background: #010407;
+
+    box-shadow:
+        0 0 40px rgba(0,217,255,0.3),
+        0 30px 70px rgba(0,0,0,0.8);
+}
+
+.screen-content {
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06202c,
+            #02070c
+        );
+}
+
+.screen-content h2 {
+    font-size: 42px;
+
+    line-height: 0.9;
+}
+
+.screen-content span {
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 20px #00d9ff;
+}
+
+/* НОУТБУКТУН ТҮБҮ */
+
+.keyboard {
+    width: 390px;
+
+    height: 22px;
+
+    margin-left: -15px;
+
+    background: #1c252c;
+
+    border-radius: 0 0 15px 15px;
+
+    box-shadow:
+        0 15px 25px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   НОМЕР
+========================= */
+
+.number {
+    position: absolute;
+
+    right: 35px;
+    bottom: 25px;
+
+    color: #81919f;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+/* =========================
+   TABLET / SMALL LAPTOP
+========================= */
+
+@media (max-width: 1050px) {
+
+    .banner {
+        padding: 55px;
+    }
+
+    .laptop {
+        right: 25px;
+
+        transform: scale(0.8) rotate(-4deg);
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+}
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+@media (max-width: 850px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .banner {
+        min-height: 700px;
+
+        padding: 45px 25px;
+
+        text-align: center;
+
+        border-radius: 28px;
+    }
+
+    .content {
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 16px;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .laptop {
+        display: none;
+    }
+
+    .button {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+    .number {
+        left: 0;
+        right: 0;
+
+        bottom: 18px;
+
+        text-align: center;
+    }
+}
+
+/* =========================
+   КИЧИНЕ ТЕЛЕФОН
+========================= */
+
+@media (max-width: 450px) {
+
+    .banner {
+        min-height: 650px;
+
+        padding: 35px 18px;
+    }
+
+    .logo {
+        font-size: 11px;
+
+        padding: 9px 14px;
+    }
+
+    h1 {
+        font-size: 50px;
+
+        letter-spacing: -2px;
+    }
+
+    .description {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .features {
+        gap: 8px;
+    }
+
+    .feature {
+        width: 46%;
+
+        min-width: 0;
+
+        padding: 12px 5px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .feature p {
+        font-size: 11px;
+    }
+
+    .button {
+        width: 100%;
+
+        padding: 16px 10px;
+
+        font-size: 15px;
+    }
+}
+
